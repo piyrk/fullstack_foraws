@@ -7,8 +7,8 @@ pipeline {
     }
 
     environment {
-        BACKEND_DIR = 'crud_backend/crud_backend-main'
-        FRONTEND_DIR = 'crud_frontend/crud_frontend-main'
+        BACKEND_DIR = 'car-rental-system-backend-master'
+        FRONTEND_DIR = 'car-rental-system-frontend-master'
 
         TOMCAT_URL = 'http://98.88.199.38:9090/manager/text'
         TOMCAT_USER = 'admin'
