@@ -57,7 +57,7 @@ pipeline {
                 dir("${env.BACKEND_DIR}/target") {
                     sh '''
                         echo "Listing contents of springapp1.war (BOOT-INF/classes):"
-                        unzip -l springapp1.war | grep "BOOT-INF/classes"
+                        unzip -l springapp1.war | grep "BOOT-INF/classes" || echo "No classes found or unzip not installed"
                     '''
                 }
             }
