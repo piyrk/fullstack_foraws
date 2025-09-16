@@ -52,6 +52,16 @@ pipeline {
                 }
             }
         }
+        stage('Verify Backend WAR Contents') {
+            steps {
+                dir("${env.BACKEND_DIR}/target") {
+                    sh '''
+                        echo "Listing contents of springapp1.war (BOOT-INF/classes):"
+                        unzip -l springapp1.war | grep "BOOT-INF/classes"
+                    '''
+                }
+            }
+        }
         stage('Deploy Backend to Tomcat (/springapp1)') {
             steps {
                 script {
