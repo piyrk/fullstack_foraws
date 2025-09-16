@@ -32,7 +32,7 @@ pipeline {
                         env.PATH = "${nodeHome}/bin:${env.PATH}"
                     }
                     sh 'npm install'
-                    sh 'npm run build'
+                    sh 'npm start'
                 }
             }
         }
