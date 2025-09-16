@@ -6,17 +6,16 @@ pipeline {
         maven 'MAVEN_HOME'
     }
 
-    environment {
-        BACKEND_DIR = 'car-rental-system-backend-master'
-        FRONTEND_DIR = 'car-rental-system-frontend-master'
+   environment {
+    BACKEND_DIR = 'car-rental-system-backend-master/car-rental-system-backend-master'
+    FRONTEND_DIR = 'car-rental-system-frontend-master/car-rental-system-frontend-master'
+    TOMCAT_URL = 'http://98.88.199.38:9090/manager/text'
+    TOMCAT_USER = 'admin'
+    TOMCAT_PASS = 'admin'
+    BACKEND_WAR = 'springapp1.war'
+    FRONTEND_WAR = 'frontapp1.war'
+}
 
-        TOMCAT_URL = 'http://98.88.199.38:9090/manager/text'
-        TOMCAT_USER = 'admin'
-        TOMCAT_PASS = 'admin'
-
-        BACKEND_WAR = 'springapp1.war'
-        FRONTEND_WAR = 'frontapp1.war'
-    }
 
     stages {
         stage('Clone Repository') {
